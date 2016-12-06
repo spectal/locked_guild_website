@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <title>Guild Members</title>
+  </head>
+
+      <h1 align="middle">Guild Members</h1>
+          {% for member in members.iterkeys() %}
+            {% for item in (members.get(member)) %}
+              {% set items = item %}
+              {% set member_class = item[1].strip() %}
+                  <div class="{{ member_class }} floating_box">
+                      <h1 align="left"> {{ member }} </h1>
+            {% end %}
+
+          {% block member_attrib %}{% end %}
+
+                  </div>
+          {% end %}
+</html>

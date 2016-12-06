@@ -1,0 +1,11 @@
+{% extends "guild_members.html" %}
+
+
+{% block member_attrib %}
+{% for item in (members.get(member)) %}
+  {% set items = item %}
+  {% for item in items %}
+      <p align="left"> {{ item }} </p>
+    {% end %}
+{% end %}
+{% end %}
